@@ -12,8 +12,7 @@
 }
         /* Fondo Personajes */
 .body_personajes {
-    background: rgb(40,40,40);
-    background: linear-gradient(0deg, rgba(40,40,40,1) 0%, rgba(104,104,104,1) 27%, rgba(104,104,104,1) 75%, rgba(40,40,40,1) 100%);
+    background-color: blanchedalmond;
 }
         /* Fondo Galeria */
 .body_galeria {
@@ -21,11 +20,7 @@
 }
         /* Fondo Contacto */
 .body_contacto {
-    background-image: url(../imagenes/backgroundContacto.jpg);
-    background-position: center;
-    background-size: 1559px 762px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: blanchedalmond;
 }
         /* Marco para testear */
 /* div {
@@ -227,6 +222,7 @@
     font-family: 'Rubik Wet Paint', cursive;
     font-size: 40px;
     -webkit-text-stroke: 0.5px rgb(168, 168, 168);
+    text-align: center;
 }
 
 .titulo_p {
@@ -351,8 +347,7 @@
 }
 
 .galeria1 {
-    width: 500px;
-    height: 310px;
+    width: 100%;
 }
 
 .galeria2 {
@@ -414,7 +409,7 @@
 }
         /* RESPONSIVE */
         /* Resolucion 320 Px */
-@media screen and (max-width:320px){
+@media screen and (max-width:425px){
     .gridIndex {
         display: grid;
         grid-template-columns: 100%;
@@ -440,5 +435,113 @@
     }
     #footer {
         font-size: 15px;
+    }
+            /* Navegacion universal */
+    #nav {
+        display: grid;
+        grid-area: nav;
+        background-color: rgb(248, 176, 20);
+        border-radius: 15px;
+    }
+
+    .ul_nav {
+        display: flex;
+        list-style: none;
+        flex-flow: row-reverse wrap;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0px;
+    }
+
+    .ul_navli {
+        padding-inline: 2px;
+        font-size: 13px;
+        font-family: 'Boogaloo', cursive;
+    }
+
+    .imgNav {
+        position: absolute;
+        width: 130px;
+        top: 10px;
+        left: 8px;
+    }
+            /* SINOPSIS Styles */
+            /* Layout */      
+    .sinopsisTitulo {
+        font-size: 30px;
+    }
+
+    .div_sinopsis-escenario {
+        width: 420px;
+    }
+
+    .section_img {
+        width: 420px;
+    }
+            /* PERSONAJES STYLES */
+            /* Layout */
+    .gridPersonajes {
+        display: grid;
+        grid-template-rows: 0.7fr 2fr 320px 490px 320px 250px 370px 410px 1fr;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "nav"
+        "titulo"
+        "imgDenji"
+        "descDenji"
+        "imgPower"
+        "descPower"
+        "imgAki"
+        "descAki"
+        "footer";
+    }
+            /* GALERIA STYLES */
+            /* Galeria Layout */
+    .gridGaleria {
+        display: grid;
+        grid-template-rows: 1.8% 320px 320px 320px 320px 320px 320px 320px 320px 320px 3%;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "nav"
+        "media1"
+        "media2"
+        "media3"
+        "media4"
+        "media5"
+        "media6"
+        "media7"
+        "media8"
+        "media9"
+        "footer";
+        grid-gap: 5px;
+    }
+    
+    .galeria1 {
+        width: 420px;
+        height: 304px;
+    }
+    
+    .galeria2 {
+        width: 420px;
+    }
+    
+    .galeria3 {
+        width: 220px;
+    }
+    
+    .galeria4 {
+        width: 420px;
+    }
+    
+    .galeria5 {
+        width: 260px;
+    }
+    
+    .galeria8 {
+        width: 420px;
+    }
+    
+    .galeria9 {
+        width: 420px;
     }
 }
