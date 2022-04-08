@@ -8,19 +8,23 @@
 }
         /* Fondo Sinopsis */
 .body_sinopsis {
-    background-color: blanchedalmond;
+    background: rgb(255,206,131);
+    background: linear-gradient(90deg, rgba(255,206,131,1) 0%, rgba(255,235,205,1) 15%, rgba(255,235,205,1) 85%, rgba(255,206,131,1) 100%);
 }
         /* Fondo Personajes */
 .body_personajes {
-    background-color: blanchedalmond;
+    background: rgb(255,206,131);
+    background: linear-gradient(90deg, rgba(255,206,131,1) 0%, rgba(255,235,205,1) 15%, rgba(255,235,205,1) 85%, rgba(255,206,131,1) 100%);
 }
         /* Fondo Galeria */
 .body_galeria {
-    background-color: black;
+    background: rgb(67,67,67);
+    background: linear-gradient(0deg, rgba(67,67,67,1) 0%, rgba(0,0,0,1) 50%);
 }
         /* Fondo Contacto */
 .body_contacto {
-    background-color: blanchedalmond;
+    background: rgb(255,206,131);
+    background: linear-gradient(90deg, rgba(255,206,131,1) 0%, rgba(255,235,205,1) 15%, rgba(255,235,205,1) 85%, rgba(255,206,131,1) 100%);
 }
         /* Marco para testear */
 /* div {
@@ -105,10 +109,23 @@
     color: rgb(248, 176, 20);
     letter-spacing: 6px;
     justify-content: space-between;
+    animation-name: aparicion;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 0s;   
 }
 
 .liImg {
     height: 460px;
+    transition: height 1s;
+    animation-name: aparicion;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+
+.liImg:hover {
+    height: 480px;
 }
         /* Descripcion (centro derecha) */
 #descripcionIndex {
@@ -123,11 +140,19 @@
     font-size: 35px;
     -webkit-text-stroke: 0.5px rgb(255, 255, 255);
     font-family: 'Boogaloo', cursive;
+    animation-name: aparicion;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 0s;   
 }
         /* Navegacion (botones) */
         #navIndex {
     display: grid;
     grid-area: botones;
+    animation-name: aparicion;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 0s;   
 }
 
 .ulNav {
@@ -152,6 +177,17 @@
     color: rgb(184, 78, 8);
     -webkit-text-stroke: 0.5px rgb(0, 0, 0);
     font-family: 'Boogaloo', cursive;
+    transition: width 1s, height 1s;
+}
+
+.liButtom:hover {
+    width: 270px;
+    height: 100px;
+}
+        /* Animacion de Aparicion para el index */
+@keyframes aparicion {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
         /* SINOPSIS Styles */
         /* Layout */
@@ -198,6 +234,23 @@
     bottom: 2px;
     right: 20px;
     width: 90px;
+}
+
+.div_pochita:hover {
+    animation-name: sacudir;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-delay: 0s;  
+}
+
+@keyframes sacudir {
+    0% {transform: rotate(0deg);}
+    10% {transform: rotate(-10deg);}
+    30% {transform: rotate(10deg);}
+    50% {transform: rotate(-10deg);}
+    70% {transform: rotate(10deg);}
+    90% {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);}
 }
         /* PERSONAJES STYLES */
         /* Layout */
